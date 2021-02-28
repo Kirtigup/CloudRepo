@@ -1,6 +1,6 @@
 node {
     stage('Get Source'){
-        git 'https://github.com/rtxverma123/flaskrunkubernetes.git'
+        git 'https://github.com/Kirtigup/CloudRepo.git'
         
     }
     stage('Docker-build'){
