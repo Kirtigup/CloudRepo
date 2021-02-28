@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app
+spec:
+  selector:
+    matchLabels:
+      name: flask-app
+  template:
+    metadata:
+      labels:
+        name: flask-app
+    spec:
+      containers:
+      - name: myapp
+        image: rtxverma123/jenkinsdeployments
+        ports:
+        - containerPort: 30017
