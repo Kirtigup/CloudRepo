@@ -1,6 +1,9 @@
 FROM python:latest
-ADD PythonProgram.py /
-RUN pip install flask
+ADD main.py /
+RUN pip install Flask
 RUN pip install flask_restful
-EXPOSE 3333
-CMD [ "python","./PythonProgram.py"]
+RUN python3 -m venv venv
+RUN  export FLASK_APP=main.py
+EXPOSE 5001
+ENTRYPOINT [ "python" ] 
+CMD [ "main.py" ]
