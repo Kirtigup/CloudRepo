@@ -25,7 +25,7 @@ pipeline {
     stage('Authenticate with IBM Cloud CLI') {
       steps {
         sh '''
-            ibmcloud login --apikey "${api-key}" -r "${IBM_CLOUD_REGION}" -g Default
+            ibmcloud login --apikey iOWdNWHrRiIeQFd-xMWW_pYrcxGcRul5a4ZInHFi0Kze -r "${IBM_CLOUD_REGION}" -g Default
             ibmcloud ks cluster config --cluster ${IKS_CLUSTER}
             '''
       }
