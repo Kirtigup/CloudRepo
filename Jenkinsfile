@@ -4,11 +4,11 @@ node {
         
     }
     stage('Docker-build'){
-        sh 'docker build -t rtxverma123/bootstrapkubernetesflask .'
+        sh 'docker build -t kirtigupta123456/my-app'
     }
     stage('Docker-push'){
-        docker.withRegistry('https://registry.hub.docker.com','Docker'){
-            def customImage = docker.build('rtxverma123/bootstrapkubernetesflask')
+        docker.withRegistry('https://registry.hub.docker.com','DockerIdentity'){
+            def customImage = docker.build('kirtigupta123456/my-app')
             customImage.push()
         }
     }
